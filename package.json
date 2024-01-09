@@ -1,0 +1,28 @@
+{
+  "name": "setSelectors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx hardhat run ./scripts/testSelectors.js --network hardhat"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solarity/solidity-lib": "2.6.9",
+    "@openzeppelin/contracts": "4.9.2",
+    "@openzeppelin/contracts-upgradeable": "4.9.2",
+    "@spherex-xyz/contracts": "1.0.5",
+    "@spherex-xyz/engine-contracts": "0.0.1",
+    "@uniswap/v2-periphery": "1.1.0-beta.0",
+    "@uniswap/v3-periphery": "1.4.4",
+"hardhat": "=2.14.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "=2.0.2",
+    "dotenv": "^16.3.1"
+    
+  }
+}
