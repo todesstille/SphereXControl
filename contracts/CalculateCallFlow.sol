@@ -31,7 +31,7 @@ contract CalculateCallFlow {
 
             enter(hex"544df02c");
 
-                for (uint i = 0; i < 15; i++) {
+                for (uint i = 0; i < 21; i++) {
                 enter(hex"7fde4424");
                 exit(hex"7fde4424");
                 }
