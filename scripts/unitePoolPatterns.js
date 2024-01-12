@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 const {getTransactionList} = require("./utils/txList.js");
 
-const txs = getTransactionList("VALIDATORS_POOL_LIST");
+const txs = getTransactionList("DEFAULT_POOL_LIST");
 
 async function main() {
     let patterns = [];
