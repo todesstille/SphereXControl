@@ -70,9 +70,9 @@ async function main() {
         data: "0xa3eb854500000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000d555345525f5245474953545259000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008609404f2000000000000000000000000000000000000000000000000000000006c46a2c500000000000000000000000000000000000000000000000000000000d9ee212a00000000000000000000000000000000000000000000000000000000482b390f000000000000000000000000000000000000000000000000000000002cb8325700000000000000000000000000000000000000000000000000000000a9a5e3af00000000000000000000000000000000000000000000000000000000715018a600000000000000000000000000000000000000000000000000000000c1bbeefe00000000000000000000000000000000000000000000000000000000"
     });
     receipt = await tx.wait();
-    console.log(" selectors are set.")
+    console.log("USER_REGISTRY selectors are set.")
     console.log("Tx:", receipt.transactionHash);
-    console.log("USER_REGISTRY")
+    console.log("")
 
     tx = await admin.sendTransaction({
         value: 0,
@@ -216,17 +216,17 @@ async function main() {
     console.log("Tx:", receipt.transactionHash);
     console.log("");
 
-    tx = await coreEngine.configureRules("0x0000000000000001");
-    receipt = await tx.wait();
-    console.log("Rules for Core Engine are set.");
-    console.log("Tx:", receipt.transactionHash);
-    console.log("");
+    // tx = await coreEngine.configureRules("0x0000000000000001");
+    // receipt = await tx.wait();
+    // console.log("Rules for Core Engine are set.");
+    // console.log("Tx:", receipt.transactionHash);
+    // console.log("");
 
-    tx = await poolEngine.configureRules("0x0000000000000001");
-    receipt = await tx.wait();
-    console.log("Rules for Pool Engine are set.");
-    console.log("Tx:", receipt.transactionHash);
-    console.log("");
+    // tx = await poolEngine.configureRules("0x0000000000000001");
+    // receipt = await tx.wait();
+    // console.log("Rules for Pool Engine are set.");
+    // console.log("Tx:", receipt.transactionHash);
+    // console.log("");
 
 }
 
