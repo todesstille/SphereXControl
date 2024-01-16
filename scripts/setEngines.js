@@ -204,6 +204,17 @@ async function main() {
     console.log("Tx:", receipt.transactionHash);
     console.log("");
 
+    tx = await admin.sendTransaction({
+        value: 0,
+        to: POOL_ENGINE,
+        data: "0x04539062000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000010000000000F107DB4ACA5868550DA730D8726A1A6E2A6EE492B837661CCC4E42",
+    });
+    receipt = await tx.wait();
+    console.log("Pool Half-Pattern to handle exit from function after turning on engine set.");
+    console.log("Tx:", receipt.transactionHash);
+    console.log("");
+
+
     tx = await contractRegistry.toggleSphereXEngine(true);
     receipt = await tx.wait();
     console.log("Contract Registry Engines are set.");
@@ -216,17 +227,17 @@ async function main() {
     console.log("Tx:", receipt.transactionHash);
     console.log("");
 
-    // tx = await coreEngine.configureRules("0x0000000000000001");
-    // receipt = await tx.wait();
-    // console.log("Rules for Core Engine are set.");
-    // console.log("Tx:", receipt.transactionHash);
-    // console.log("");
+    tx = await coreEngine.configureRules("0x0000000000000000");
+    receipt = await tx.wait();
+    console.log("Rules for Core Engine are set.");
+    console.log("Tx:", receipt.transactionHash);
+    console.log("");
 
-    // tx = await poolEngine.configureRules("0x0000000000000001");
-    // receipt = await tx.wait();
-    // console.log("Rules for Pool Engine are set.");
-    // console.log("Tx:", receipt.transactionHash);
-    // console.log("");
+    tx = await poolEngine.configureRules("0x0000000000000000");
+    receipt = await tx.wait();
+    console.log("Rules for Pool Engine are set.");
+    console.log("Tx:", receipt.transactionHash);
+    console.log("");
 
 }
 

@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx hardhat run ./scripts/setEngines.js --network chapel"
+    "start": "npx hardhat run ./scripts/setEngines.js --network chapel",
+    "patterns1": "npx hardhat run ./scripts/setMultiplierMint.js --network chapel",
+    "patterns2": "npx hardhat run ./scripts/setMultiplierMintAndValidate.js --network chapel",
+    "patterns3": "npx hardhat run ./scripts/setWhitelistMint.js --network chapel",
+    "patterns4": "npx hardhat run ./scripts/setWhitelistMintAndValidate.js --network chapel"
   },
   "keywords": [],
   "author": "",
